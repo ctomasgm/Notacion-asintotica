@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notación asintótica</title>
+    <meta name="author" content="Sergio Rodríguez, Uriel González, Ericka Bermúdez, Carlos García">
+    <meta name="description" content="">
+    <link rel="icon" href="img/f(x).png">
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="math.js"></script>
+
+</head>
+<body>
+
+      <!-- Navbar (sit on top) -->
+  <div class="topPage">
+    <div class="navBar" id="myNavbar">
+      <a class="barItem barButton hideMedium hideLarge" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="goToBars"></i>
+      </a>
+      <a href="#home" class="barItem barButton">Principal</a>
+      <a href="#instrucciones" class="barItem barButton hideSmall"><i class="goToInstrucciones"></i> Instrucciones</a>
+      <a href="#calc" class="barItem barButton hideSmall"><i class="goToCalc"></i> Calcular</a>
+      <a href="#info" class= "barItem barButton hideSmall"><i class="gotToInfo"></i>Notaciones</a>
+      <a href="#credits" class="barItem barButton hideSmall"><i class="goToCredits"></i> Créditos</a>
+    </div>
+  </div>
+
+  <!--End Navbar-->
+
+    <!-- Presentation Image -->
+  <div class="bigImage-1 displayContainer opacityMin" id="home">
+      <span class= "title animateOpacity">Cálculo<br/>de<br/>Notaciones</span>
+  </div>
+
+  <!--End Presentation Image-->
+  <div class="content container padding64px" id="instrucciones">
+    <h1>Instrucciones de uso</h1>
+      <ul>
+          <p></p>
+          <li>La variable siempre será <strong>x</strong>.</li>
+          <li>Para especificar una multiplicación se utiliza <strong>*</strong>.</li>
+          <li>Para especificar una división se utiliza <strong>/</strong>.</li>
+          <li>Para poner exponentes se utiliza el simbolo <strong>^</strong>.</li>
+          <li>Para asignar una base al logaritmo se escribe <strong>log2(f(x))</strong> <br><i>donde 2 es la base y f(x) una funcion cualquiera</i>.<br><br><br>
+              <hr>
+      </ul>
+  </div>
+  <div class="content container padding64px" id="calc">
+    <h1>Calcular notaciones</h1>
+  </div>
+    <div class="ecuaciones">
+        <p>
+            Función F(x):<br/><input type="text" id="f(x)" placeholder="Ejemplo: 3x^2+4x-2" /><br/>
+            Función G(x):<br/><input type="text" id="g(x)" placeholder="Ejemplo: x^2" /><br/>
+                <a class="botones" id="boton_omega">Omega</a>
+                <a class="botones" id="boton_o">Notacion O</a>
+                <a class="botones" id="boton_theta">Theta</a>
+        </p>
+    </div>
+
+    <div class = "content container paddding64px" id = "info">
+        <br>
+      <h1><hr>Sobre las notaciones</h1><br>Información de: <a target="_blank" href = "https://es.khanacademy.org/">khanacademy.org </a>
+      <p>
+        <div class = "bold">Notación θ grande (Big-θ)</div>
+        <div class = "justify">Cuando decimos que un tiempo de ejecución particular es de Θ(n), estamos diciendo que una vez que n n nn sea suficientemente grande, el tiempo de ejecución será por lo menos k1⋅n y a lo más k2⋅n para algunas constantes k1 y k2.</div>
+        <center><img src="https://s3.amazonaws.com/ka-cs-algorithms/theta_fn.png"></center>
+
+         <div class = "bold">Notación O grande (Big-O)</div>
+        <div class = "justify">Usamos la notación Θ grande para acotar de manera asintótica el crecimiento de un tiempo de ejecución dentro del rango de factores constantes por arriba y por abajo. A veces queremos acotar solo por arriba. Si un tiempo de ejecución es O(f(n)), entonces para n suficientemente grande, el tiempo de ejecución es a lo más k⋅f(n) para alguna constante k. Decimos que el tiempo de ejecución es "O grande de f(n)" o simplemente "O de f(n)". Usamos la notación O grande para cotas superiores asintóticas, ya que acota el crecimiento del tiempo de ejecución por arriba para entradas suficientemente grandes. </div>
+        <center><img src="https://ka-perseus-images.s3.amazonaws.com/501211c02f4c6765f60f23842450e1151cfd9c89.png"></center>
+
+        <div class = "bold">Notación Omega grande (Big-Ω)</div>
+        <div class = "justify">A veces, queremos decir que un algoritmo toma por lo menos una cierta cantidad de tiempo, sin dar una cota superior. Utilizamos la notación Ω grande; esa es la letra griega "omega". Decimos que el tiempo de ejecución es "Ω grande de f(n)". Usamos la notación Ω grande para límites asintóticos inferiores, ya que acota el crecimiento del tiempo de ejecución por abajo para entradas de tamaños suficientemente grandes.</div>
+        <center><img src="https://s3.amazonaws.com/ka-cs-algorithms/Omega_fn.png"></center>
+
+      </p>
+      <a target="_blank" href="https://es.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation" class="botones" id="khanacademy">Leer más</a>
+    </div>
+    <footer>
+      <p>
+          <div class="info " id="credits">
+              Sergio Rodríguez 281854 <br>Ericka Bermúdez 282478<br>Uriel González 320736<br>Carlos García 320608<br>
+          </div>
+          <div class="img">
+              <img src="img/logo uach.png" width="90" alt="Logo UACH">
+          </div>
+          <div class="Copyright">
+              Todos los derechos reservados. Copyright (c) 2018 <i>UACH Ingeniería</i>
+          </div>
+      </p>
+    </footer>
+    <script src="funciones.js"></script>
+    </body>
+
+</html>
